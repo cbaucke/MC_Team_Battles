@@ -1,0 +1,2 @@
+tellraw @a {"text":"Earn points for your team by killing mobs and players, mining ores, and progressing towards beating the game.","bold":false,"color":"green"}
+schedule function teambattle:startmsg3 6s append
