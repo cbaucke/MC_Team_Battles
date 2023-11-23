@@ -124,12 +124,12 @@ scoreboard players operation Gold score += Gold temp_calc
 scoreboard players set @a[team=Gold] netherite 0
 
 # Gold achievements
-execute if entity @a[advancements={minecraft:story/enter_the_nether=true}, team=Gold] if score global nether matches 0 run function teambattle:nethergold
-execute if entity @a[advancements={minecraft:story/enter_the_end=true}, team=Gold] if score global end matches 0 run function teambattle:endgold
-execute if entity @a[advancements={minecraft:end/kill_dragon=true}, team=Gold] if score global gameover matches 0 run function teambattle:gameovergold
-execute if entity @a[advancements={minecraft:nether/brew_potion=true}, team=Gold] if score global potion matches 0 run function teambattle:potiongold
-execute if entity @a[advancements={minecraft:story/enchant_item=true}, team=Gold] if score global enchant matches 0 run function teambattle:enchantgold
-execute if entity @a[advancements={minecraft:nether/find_fortress=true}, team=Gold] if score global fortress matches 0 run function teambattle:fortressgold
+execute if entity @a[advancements={minecraft:story/enter_the_nether=true}, team=Gold] if score global nether matches 0 run function teambattle:achievements/nethergold
+execute if entity @a[advancements={minecraft:story/enter_the_end=true}, team=Gold] if score global end matches 0 run function teambattle:achievements/endgold
+execute if entity @a[advancements={minecraft:end/kill_dragon=true}, team=Gold] if score global gameover matches 0 run function teambattle:achievements/gameovergold
+execute if entity @a[advancements={minecraft:nether/brew_potion=true}, team=Gold] if score global potion matches 0 run function teambattle:achievements/potiongold
+execute if entity @a[advancements={minecraft:story/enchant_item=true}, team=Gold] if score global enchant matches 0 run function teambattle:achievements/enchantgold
+execute if entity @a[advancements={minecraft:nether/find_fortress=true}, team=Gold] if score global fortress matches 0 run function teambattle:achievements/fortressgold
 
 
 # Pink points
@@ -247,12 +247,12 @@ scoreboard players operation Pink score += Pink temp_calc
 scoreboard players set @a[team=Pink] netherite 0
 
 # Pink achievements
-execute if entity @a[advancements={minecraft:story/enter_the_nether=true}, team=Pink] if score global nether matches 0 run function teambattle:netherpink
-execute if entity @a[advancements={minecraft:story/enter_the_end=true}, team=Pink] if score global end matches 0 run function teambattle:endpink
-execute if entity @a[advancements={minecraft:nether/brew_potion=true}, team=Pink] if score global potion matches 0 run function teambattle:potionpink
-execute if entity @a[advancements={minecraft:story/enchant_item=true}, team=Pink] if score global enchant matches 0 run function teambattle:enchantpink
-execute if entity @a[advancements={minecraft:nether/find_fortress=true}, team=Pink] if score global fortress matches 0 run function teambattle:fortresspink
-execute if entity @a[advancements={minecraft:end/kill_dragon=true}, team=Pink] if score global gameover matches 0 run function teambattle:gameoverpink
+execute if entity @a[advancements={minecraft:story/enter_the_nether=true}, team=Pink] if score global nether matches 0 run function teambattle:achievements/netherpink
+execute if entity @a[advancements={minecraft:story/enter_the_end=true}, team=Pink] if score global end matches 0 run function teambattle:achievements/endpink
+execute if entity @a[advancements={minecraft:nether/brew_potion=true}, team=Pink] if score global potion matches 0 run function teambattle:achievements/potionpink
+execute if entity @a[advancements={minecraft:story/enchant_item=true}, team=Pink] if score global enchant matches 0 run function teambattle:achievements/enchantpink
+execute if entity @a[advancements={minecraft:nether/find_fortress=true}, team=Pink] if score global fortress matches 0 run function teambattle:achievements/fortresspink
+execute if entity @a[advancements={minecraft:end/kill_dragon=true}, team=Pink] if score global gameover matches 0 run function teambattle:achievements/gameoverpink
 
 # Check for sudden death squad wipe
 execute if score global suddenDeath matches 1 if score global gameover matches 0 unless entity @p[team=Gold, tag=!NoLives] run function teambattle:suddendeathpink

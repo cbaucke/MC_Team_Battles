@@ -159,7 +159,7 @@ place template teambattle:respawnpink ~-20 ~ ~3
 place template teambattle:respawngold ~-28 ~ ~3
 
 # Set up random item generator
-execute positioned ~ ~ ~4 run function teambattle:createranditemgen
+execute positioned ~ ~ ~4 run function teambattle:setup/createranditemgen
 
 # Teleport players
 effect give @a minecraft:saturation 1 9 true
@@ -181,5 +181,5 @@ title @a[team=Gold] subtitle {"text":"The game begins in 30 seconds!","color":"g
 title @a[team=Gold] title {"text":"You're on GOLD team","color":"gold"}
 title @a[team=Pink] subtitle {"text":"The game begins in 30 seconds!","color":"green"}
 title @a[team=Pink] title {"text":"You're on PINK team","color":"light_purple"}
-schedule function teambattle:startmsg1 6s append
-schedule function teambattle:gamestart 30s append
+schedule function teambattle:setup/startmsg1 6s append
+schedule function teambattle:setup/gamestart 30s append
