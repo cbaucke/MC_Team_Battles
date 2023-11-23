@@ -94,5 +94,5 @@
    - Cleaned up code for respawn functions
    - Changed Minecraft difficulty to normal (from hard)
    - Team leaders will now receive 2 blaze rods and 1 ender pearl every 5 minutes starting at 45 minutes
-   -Players can now use their full iron respawn starting at 40 minutes
-#   -The distance to the nearest fortress will now be announced every 5 minutes regardless of match time
+   - Players can now use their full iron respawn starting at 40 minutes
+   - The distance to the nearest fortress will now be announced every 5 minutes regardless of match time
