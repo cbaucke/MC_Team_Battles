@@ -1,0 +1,2 @@
+tellraw @a {"text":"Work with your team to reach the end and slay the dragon! The team with the most points at the end of the game wins!","bold":false,"color":"red"}
+schedule function teambattle:setup/startmsg2 6s append
