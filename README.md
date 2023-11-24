@@ -9,15 +9,14 @@
 5. Press the Start Game button in the settings room when you're ready to play
 
 ## Planned Features:
-   -Add tips to display throughout the game - every 5 minutes but spaced 2.5 mins after 5minevents
-   -Fix only some people spawning with iron gear
-   -Try to encourage team interaction without turning into pvp rush fest
-   -Disable hunger while in lobby?
-   -Increase duration of revealed coords
-   -Add stuff to do in the lobby
-   -Test functionality of new settings/structures with multiple players
+   - Tips to display throughout the game
+   - Minigames and possibly other main gamemodes in the lobby
+   - Custom items/kits
 
 ## Changelog
+
+### Version 1.10 - 11/24/23
+   - Restructured datapack folder hierarchy to reduce clutter and make development easier in the future
 
 ### Version 1.9 - 8/25/23
    - Fixed bug where lives were not automatically displaying in the list scoreboard
