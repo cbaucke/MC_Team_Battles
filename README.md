@@ -1,5 +1,4 @@
 # MC_Team_Battle
-   Created by Crispy7 and VestedOrb
 
 ## How To Start
 1. Download the "teambattle" folder and place it in your world/datapacks folder
