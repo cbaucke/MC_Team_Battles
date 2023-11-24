@@ -1,5 +1,5 @@
 {
     "values": [
-    "teambattle:scoretrack"
+    "teambattle:util/scoretrack"
     ]
 }

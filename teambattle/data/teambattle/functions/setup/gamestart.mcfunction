@@ -24,4 +24,4 @@ setblock ~ ~-2 ~ minecraft:air replace
 setblock ~ ~-1 ~ minecraft:air replace
 setworldspawn ~4 ~2 ~6
 
-schedule function teambattle:5minevents 300s
+schedule function teambattle:util/5minevents 300s

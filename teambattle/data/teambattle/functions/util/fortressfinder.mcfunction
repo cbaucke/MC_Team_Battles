@@ -1,4 +1,5 @@
-# Announce nearest fortress to each team (if players are in nether)
+# Announces nearest fortress to each team (if players are in nether)
+
 execute as @a[team=Gold] at @s store result score @s fortressDistance run locate structure fortress
 scoreboard players set $lowest fortressDistance 9999
 execute as @a[team=Gold] if score @s fortressDistance > constant zero run scoreboard players operation $lowest fortressDistance < @s fortressDistance
@@ -13,4 +14,4 @@ execute if score @p[team=Pink, tag=closestFortress] fortressDistance > constant 
 
 tag @a remove closestFortress
 
-schedule function teambattle:fortressfinder 60s
+schedule function teambattle:util/fortressfinder 60s

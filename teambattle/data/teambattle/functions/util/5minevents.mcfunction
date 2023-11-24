@@ -27,8 +27,8 @@ tellraw @a {"text":"The team leaders have been updated!","bold":true,"color":"aq
 scoreboard players set @a[tag=!Leader] teamRespawns 1
 
 # Give random items/late game blaze rods, ender pearls
-schedule function teambattle:randitempink .7s append
-schedule function teambattle:randitemgold 1.2s append
+schedule function teambattle:util/randitempink .7s append
+schedule function teambattle:util/randitemgold 1.2s append
 
 # Give everyone an extra iron kit every 30 minutes
 execute if score global timeMins matches 30 run scoreboard players operation @a kitsAvailable += constant one
@@ -50,4 +50,4 @@ execute store result score @a posZPink run data get entity @p[team=Pink,tag=Lead
 title @a[team=Pink] actionbar ["",{"text":" Position X: "},{"score":{"name":"@p[team=Gold,tag=Leader]","objective":"posXGold"},"color":"yellow","insertion":" "},{"text":" Position Z: "},{"score":{"name":"@p[team=Gold,tag=Leader]","objective":"posZGold"},"color":"yellow","insertion":" "}]
 title @a[team=Gold] actionbar ["",{"text":" Position X: "},{"score":{"name":"@p[team=Pink,tag=Leader]","objective":"posXPink"},"color":"yellow","insertion":" "},{"text":" Position Z: "},{"score":{"name":"@p[team=Pink,tag=Leader]","objective":"posZPink"},"color":"yellow","insertion":" "}]
 
-schedule function teambattle:5minevents 300s append
+schedule function teambattle:util/5minevents 300s append
