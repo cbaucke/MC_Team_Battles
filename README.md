@@ -1,4 +1,4 @@
-# MC Team Battle
+# MC Team Battles
 
 ## How To Start
 1. Download the "teambattle" folder and place it in your world/datapacks folder
