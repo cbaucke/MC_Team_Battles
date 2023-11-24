@@ -8,8 +8,8 @@ execute if score global timeHrs > constant zero run tellraw @a [{"text":"Match t
 # Check for time limit if enabled (warn 5 minutes before)
 execute if score options timeLimit matches 2 if score global timeMins matches 25 if score global timeHrs matches 1 run title @a title {"text":"5 Minutes Left!","color":"white"}
 execute if score options timeLimit matches 0 if score global timeMins matches 55 if score global timeHrs matches 0 run title @a title {"text":"5 Minutes Left!","color":"white"}
-execute if score options timeLimit matches 2 if score global timeMins matches 30 if score global timeHrs matches 1 run function teambattle:outoftime
-execute if score options timeLimit matches 0 if score global timeMins matches 0 if score global timeHrs matches 1 run function teambattle:outoftime
+execute if score options timeLimit matches 2 if score global timeMins matches 30 if score global timeHrs matches 1 run function teambattle:wincons/outoftime
+execute if score options timeLimit matches 0 if score global timeMins matches 0 if score global timeHrs matches 1 run function teambattle:wincons/outoftime
 
 # Choose new random leaders
 tag @a remove Leader

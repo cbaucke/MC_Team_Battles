@@ -3,7 +3,7 @@
 # Determine if player respawns with iron or stone kit
 execute if score @p kitsAvailable matches 0 run give @p minecraft:stone_sword 1
 execute if score @p kitsAvailable matches 0 run give @p minecraft:stone_pickaxe 1
-execute if score @p kitsAvailable >= constant one as @p run function teambattle:respawniron
+execute if score @p kitsAvailable >= constant one as @p run function teambattle:respawn/respawniron
 
 # Always run regardless of kit
 give @p minecraft:cooked_beef 8

@@ -20,7 +20,7 @@ scoreboard players operation Gold score += Gold temp_calc
 # Give 500 points/lives to dead players for Pink leader death
 execute if score @p[team=Pink, tag=Leader] Deaths > constant zero if score @p[team=Pink, tag=Leader] hasDied matches 0 if score Gold temp_calc > constant zero run scoreboard players operation Gold score += constant threeHundred
 execute if score @p[team=Pink, tag=Leader] Deaths > constant zero if score @p[team=Pink, tag=Leader] hasDied matches 0 if score Gold temp_calc matches 0 run scoreboard players operation Gold score += constant fiveHundred
-execute if score @p[team=Pink, tag=Leader] Deaths > constant zero if score @p[team=Pink, tag=Leader] hasDied matches 0 run function teambattle:addlivesgold
+execute if score @p[team=Pink, tag=Leader] Deaths > constant zero if score @p[team=Pink, tag=Leader] hasDied matches 0 run function teambattle:respawn/addlivesgold
 execute if score @p[team=Pink, tag=Leader] Deaths > constant zero if score @p[team=Pink, tag=Leader] hasDied matches 0 run tellraw @a [{"text":"The "},{"text":"Pink","color":"light_purple","bold":true},{"text":" leader has died!"}]
 execute if score @p[team=Pink, tag=Leader] Deaths > constant zero run scoreboard players set @p[team=Pink, tag=Leader] hasDied 1
 scoreboard players set @a[team=Pink] Deaths 0
@@ -143,7 +143,7 @@ scoreboard players operation Pink score += Pink temp_calc
 # Give 500 points/lives to dead players for Gold leader death
 execute if score @p[team=Gold, tag=Leader] Deaths > constant zero if score @p[team=Gold, tag=Leader] hasDied matches 0 if score Pink temp_calc > constant zero run scoreboard players operation Pink score += constant threeHundred
 execute if score @p[team=Gold, tag=Leader] Deaths > constant zero if score @p[team=Gold, tag=Leader] hasDied matches 0 if score Pink temp_calc > matches 0 run scoreboard players operation Pink score += constant fiveHundred
-execute if score @p[team=Gold, tag=Leader] Deaths > constant zero if score @p[team=Gold, tag=Leader] hasDied matches 0 run function teambattle:addlivespink
+execute if score @p[team=Gold, tag=Leader] Deaths > constant zero if score @p[team=Gold, tag=Leader] hasDied matches 0 run function teambattle:respawn/addlivespink
 execute if score @p[team=Gold, tag=Leader] Deaths > constant zero if score @p[team=Gold, tag=Leader] hasDied matches 0 run tellraw @a [{"text":"The "},{"text":"Gold","color":"gold","bold":true},{"text":" leader has died!"}]
 execute if score @p[team=Gold, tag=Leader] Deaths > constant zero run scoreboard players set @p[team=Gold, tag=Leader] hasDied 1
 scoreboard players set @a[team=Gold] Deaths 0
@@ -255,9 +255,9 @@ execute if entity @a[advancements={minecraft:nether/find_fortress=true}, team=Pi
 execute if entity @a[advancements={minecraft:end/kill_dragon=true}, team=Pink] if score global gameover matches 0 run function teambattle:achievements/gameoverpink
 
 # Check for sudden death squad wipe
-execute if score global suddenDeath matches 1 if score global gameover matches 0 unless entity @p[team=Gold, tag=!NoLives] run function teambattle:suddendeathpink
-execute if score global suddenDeath matches 1 if score global gameover matches 0 unless entity @p[team=Pink, tag=!NoLives] run function teambattle:suddendeathgold
+execute if score global suddenDeath matches 1 if score global gameover matches 0 unless entity @p[team=Gold, tag=!NoLives] run function teambattle:wincons/suddendeathpink
+execute if score global suddenDeath matches 1 if score global gameover matches 0 unless entity @p[team=Pink, tag=!NoLives] run function teambattle:wincons/suddendeathgold
 
 # Check for regular squad wipe
-execute if score global suddenDeath matches 0 if score global gameover matches 0 if score options setLives > constant zero if entity @p[team=Pink] unless entity @p[team=Pink, tag=!NoLives] run function teambattle:alldeadpink
-execute if score global suddenDeath matches 0 if score global gameover matches 0 if score options setLives > constant zero if entity @p[team=Gold] unless entity @p[team=Gold, tag=!NoLives] run function teambattle:alldeadgold
+execute if score global suddenDeath matches 0 if score global gameover matches 0 if score options setLives > constant zero if entity @p[team=Pink] unless entity @p[team=Pink, tag=!NoLives] run function teambattle:wincons/alldeadpink
+execute if score global suddenDeath matches 0 if score global gameover matches 0 if score options setLives > constant zero if entity @p[team=Gold] unless entity @p[team=Gold, tag=!NoLives] run function teambattle:wincons/alldeadgold
