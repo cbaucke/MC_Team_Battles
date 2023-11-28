@@ -4,10 +4,8 @@
 team join Teamless @a[team=]
 scoreboard players set @a[team=Teamless] Deaths 0
 
-# Remove lives for dying if enabled
-execute as @a if score options setLives > constant zero if score @s Deaths > constant zero if score @s Lives matches 0 run tag @s add NoLives
-execute as @a[tag=NoLives] if score @s Deaths > constant zero run tellraw @s {"text":"You are out of lives!","bold":true}
-execute as @a if score options setLives > constant zero if score @s Deaths > constant zero if score @s Lives > constant zero run scoreboard players remove @s Lives 1
+# Add Dead tag to dead players for respawn mechanic
+tag @a[scores={Deaths=1..}] add Dead
 
 # Gold points
 

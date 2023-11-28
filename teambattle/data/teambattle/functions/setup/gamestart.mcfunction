@@ -15,7 +15,7 @@ effect give @a minecraft:slow_falling 5 2 true
 effect give @a minecraft:saturation 1 9 true
 
 # Teleports each team to a random location around spawn
-spreadplayers ~ ~ 300 700 true @a
+spreadplayers ~ ~ 500 1000 true @a
 execute at @r[team=Gold] run summon minecraft:firework_rocket ~ ~15 ~ {LifeTime:15,FireworksItem:{id:"firework_rocket",Count:1,tag:{Fireworks:{Flight:2,Explosions:[{Type:1,Flicker:1,Trail:1,Colors:[I;2651799],FadeColors:[I;15435844]},{Type:3,Flicker:1,Trail:1,Colors:[I;3887386],FadeColors:[I;11250603]}]}}}}
 execute at @r[team=Pink] run summon minecraft:firework_rocket ~ ~15 ~ {LifeTime:15,FireworksItem:{id:"firework_rocket",Count:1,tag:{Fireworks:{Flight:2,Explosions:[{Type:1,Flicker:1,Trail:1,Colors:[I;2651799],FadeColors:[I;15435844]},{Type:3,Flicker:1,Trail:1,Colors:[I;3887386],FadeColors:[I;11250603]}]}}}}
 

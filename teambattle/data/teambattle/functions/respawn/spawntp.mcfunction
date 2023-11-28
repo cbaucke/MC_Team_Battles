@@ -1,4 +1,5 @@
 # Teleports players to the appropriate spawn building
+# Deprecated - Safe to remove?
 
 # TP Pink players
 execute as @p if entity @s[team=Pink, tag=!NoLives] run tp @s ~-22 ~-1 ~-2
