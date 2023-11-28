@@ -12,13 +12,10 @@ execute if score options timeLimit matches 2 if score global timeMins matches 30
 execute if score options timeLimit matches 0 if score global timeMins matches 0 if score global timeHrs matches 1 run function teambattle:wincons/outoftime
 
 # Choose new random leaders
+scoreboard players set @a hasDied 0
 tag @a remove Leader
 tag @r[team=Pink, tag=!NoLives] add Leader
 tag @r[team=Gold, tag=!NoLives] add Leader
-scoreboard players set @p[team=Pink, tag=Leader] Deaths 0
-scoreboard players set @p[team=Pink, tag=Leader] hasDied 0
-scoreboard players set @p[team=Gold, tag=Leader] Deaths 0
-scoreboard players set @p[team=Gold, tag=Leader] hasDied 0
 effect give @a[tag=Leader] minecraft:glowing 300
 effect give @a[tag=Leader] minecraft:speed 300
 tellraw @a {"text":"The team leaders have been updated!","bold":true,"color":"aqua"}

@@ -1,8 +1,10 @@
+# Sets up the world border, gamerules, fortress generation, and scoreboard for the game
+
 # World set up
 worldborder set 5376
 worldborder center 0 0
 gamerule doDaylightCycle true
-gamerule doImmediateRespawn true
+gamerule keepInventory true
 time set day
 execute if score options enableWeather matches 0 run gamerule doWeatherCycle false
 execute if score options enableWeather matches 1 run gamerule doWeatherCycle true
@@ -10,6 +12,9 @@ execute if score options setDifficulty matches 0 run difficulty easy
 execute if score options setDifficulty matches 1 run difficulty normal
 execute if score options setDifficulty matches 2 run difficulty hard
 gamemode survival @a
+execute in minecraft:the_nether run forceload add -64 -64 64 64
+execute in minecraft:the_nether run place structure minecraft:fortress 0 60 0
+execute in minecraft:the_nether run forceload remove -64 -64 64 64
 
 # Delete lobby
 execute positioned ~4 ~2 ~6 run fill ~4 ~-55 ~-7 ~-12 ~-44 ~21 minecraft:air replace

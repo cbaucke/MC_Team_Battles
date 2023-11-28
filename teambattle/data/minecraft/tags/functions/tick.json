@@ -1,5 +1,6 @@
 {
     "values": [
-    "teambattle:util/scoretrack"
+        "teambattle:util/scoretrack",
+        "teambattle:respawn/deadtp"
     ]
 }

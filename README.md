@@ -9,10 +9,20 @@
 
 ## Planned Features:
    - Tips to display throughout the game
-   - Minigames and possibly other main gamemodes in the lobby
-   - Custom items/kits
+   - Minigames and other main gamemodes to choose from in the lobby
 
 ## Changelog
+
+### Version 1.11 - 11/28/23
+   - Revamped the respawn system:
+     - Enabled KeepInventory to keep players able to focus on getting to the end
+     - Added a 5-second cooldown after respawning before teleporting to the respawn room
+     - All players will now respawn at the respawn rooms, bed or not
+     - Respawn rooms can now tp players to their beds, if they have one
+     - Players who are out of lives now become spectators
+   - A guaranteed nether fortress will now always spawn at (0, 0), but it won't award points
+   - Increased initial spawn distance between teams
+   - Various minor improvements to the code
 
 ### Version 1.10 - 11/24/23
    - Restructured datapack folder hierarchy to reduce clutter and make development easier in the future
